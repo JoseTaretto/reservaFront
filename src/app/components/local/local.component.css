@@ -1,0 +1,6 @@
+.card-img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe el 100% de la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin deformarse */
+  }
+  
