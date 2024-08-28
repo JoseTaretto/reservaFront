@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BanerComponent } from "../baner/baner.component";
-import { SearchComponent } from "../search/search.component";
+import { SearchComponent } from "../nav/search.component";
 import { LocalComponent } from "../local/local.component";
 
 @Component({
