@@ -21,10 +21,7 @@ export class LocalComponent implements OnInit {
   ngOnInit(): void {
     this.empleadoNegociosServiceService.getNegocios().subscribe(data => {
       this.negocios = data;
-    });
-    console.log(this.negocios)
+      console.log(this.negocios)
+    });    
   }
-
-  constructor() { }
-
 }

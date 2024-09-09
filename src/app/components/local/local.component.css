@@ -1,5 +1,5 @@
 .img-fixed-size {
   width: 100%;
-  height: 200px; /* Puedes ajustar la altura según tus necesidades */
+  height: 150px; /* Puedes ajustar la altura según tus necesidades */
   object-fit: cover; /* Esto recorta la imagen para que se ajuste sin deformarse */
 }

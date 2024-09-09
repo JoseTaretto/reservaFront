@@ -17,7 +17,6 @@ export class NegociosService {
   constructor() { }
 
   getNegocios(): Observable<Negocio[]> {  // Usa la interfaz Negocio[]
-    console.log(this.empleados)
     return this._httpClient.get<Negocio[]>(this.apiUrl);
   }
 }

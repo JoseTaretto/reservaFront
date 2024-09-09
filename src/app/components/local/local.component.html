@@ -1,1 +1,18 @@
-<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, blanditiis quis doloribus, in nulla necessitatibus ex velit, architecto accusantium cupiditate libero distinctio expedita similique. Hic repellat quia eaque asperiores necessitatibus?</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let negocio of negocios">
+                    <div class="card mb-2" style="width: 18rem;">
+                        <img [src]="negocio.img" class="card-img-top img-fixed-size" alt="Imagen del negocio">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ negocio.name }}</h5>
+                            <p class="card-text">{{ negocio.datetime }}</p>
+                            <a href="#" class="btn btn-primary">Ir a la tienda</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
