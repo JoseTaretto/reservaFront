@@ -2,6 +2,6 @@ export interface IProduct {
     _id: number;
     name: string;
     availability: boolean;
-    img: string;
+    img?: string;
     stock: number;
 };

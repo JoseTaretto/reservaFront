@@ -16,10 +16,10 @@ export class LocalComponent implements OnInit {
 
   public negocios: Negocio[] = [];  // Usa la interfaz Negocio[]
 
-  private empleadoNegociosServiceService = inject (NegociosService);
+  private empleadoNegociosService = inject (NegociosService);
 
   ngOnInit(): void {
-    this.empleadoNegociosServiceService.getNegocios().subscribe(data => {
+    this.empleadoNegociosService.getNegocios().subscribe(data => {
       this.negocios = data;
       console.log(this.negocios)
     });    
