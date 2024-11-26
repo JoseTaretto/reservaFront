@@ -6,7 +6,7 @@ import { LocalComponent } from "../locales/local.component";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [BanerComponent, SearchComponent, LocalComponent ],
+  imports: [SearchComponent, LocalComponent ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

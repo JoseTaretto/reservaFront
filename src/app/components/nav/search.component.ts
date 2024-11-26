@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Asegúrate de importar esto
+import { AgregarLocalComponent } from '../agregar-local/agregar-local.component';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AgregarLocalComponent],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
