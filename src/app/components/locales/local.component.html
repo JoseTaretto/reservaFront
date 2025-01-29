@@ -8,7 +8,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ negocio.name }}</h5>
                             <p class="card-text">{{ negocio.datetime }}</p>
-                            <a href="#" class="btn btn-primary">Ir a la tienda</a>
+                            <a class="btn btn-primary" (click)="irLocal(negocio._id)">Ir a la tienda</a>
                         </div>
                     </div>
                 </div>

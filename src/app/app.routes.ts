@@ -6,8 +6,7 @@ import { LocalFormComponent } from './components/local-form/local-form.component
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
-    {path: 'negocio', component: NegocioComponent},
+    {path: 'negocio/:id', component: NegocioComponent},
     {path: 'ingresarlocal', component:LocalFormComponent },
-    {path: '**', redirectTo: 'home', pathMatch: 'full' }
-    
+    {path: '**', redirectTo: 'home', pathMatch: 'full' }  
 ];

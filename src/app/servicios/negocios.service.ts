@@ -12,11 +12,17 @@ export class NegociosService {
 
   private _httpClient = inject(HttpClient)
 
-  public empleados : Negocio[] = [];
+  public negocios : Negocio[] = [];
+  public id: number=0;
 
   constructor() { }
 
   getNegocios(): Observable<Negocio[]> {  // Usa la interfaz Negocio[]
     return this._httpClient.get<Negocio[]>(this.apiUrl);
   }
+
+  getNegocio(id: number): Observable<Negocio> {
+    return this._httpClient.get<Negocio>(`${this.apiUrl}/${id}`);
+  }
+
 }

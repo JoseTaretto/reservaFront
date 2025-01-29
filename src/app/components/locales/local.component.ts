@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { NegociosService } from '../../servicios/negocios.service';
 import { CommonModule } from '@angular/common';
 import { Negocio } from '../../interfaces/negocios';  // Importa la interfaz
@@ -14,14 +14,24 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class LocalComponent implements OnInit {
 
-  public negocios: Negocio[] = [];  // Usa la interfaz Negocio[]
+  public negocios: Negocio[] = [];
+  public negocio: Negocio | undefined;
 
-  private empleadoNegociosService = inject (NegociosService);
+  private negociosService = inject (NegociosService);
+  
+  selectedNegocio: Negocio | null = null;
 
+  constructor(private router: Router) {}
+  
   ngOnInit(): void {
-    this.empleadoNegociosService.getNegocios().subscribe(data => {
+    this.negociosService.getNegocios().subscribe(data => {
       this.negocios = data;
       console.log(this.negocios)
     });    
   }
+  
+  irLocal(id: number): void {
+    this.router.navigate(['/negocio', id]); // Navegar al componente NegocioComponent con el ID
+  }
+  
 }

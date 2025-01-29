@@ -21,6 +21,7 @@ export class LocalFormComponent {
 
   onSubmit() {
     if (this.formNegocio.valid) {
+      
       const formData = this.formNegocio.value; // Obtén los valores del formulario
 
       fetch('http://localhost:3000/routerNegocio', {

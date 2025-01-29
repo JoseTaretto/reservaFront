@@ -1,16 +1,26 @@
-<app-search></app-search>
 <div class="container">
-    <div class="col-12">
-        <div class="col-2">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="row">
+      <div class="col-12">
+        <h2>Productos del negocio</h2>
+        <table class="table table-bordered table-responsive">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Descripción</th>
+              <th>Disponibilidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *NgFor="let producto of productos; let i = index">
+              <td>{{ producto.nombre }}</td>
+              <td>{{ producto.precio }}</td>
+              <td>{{ producto.descripcion }}</td>
+              <td>{{ producto.disponibilidad ? 'Disponible' : 'No disponible' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-</div>
+  </div>
+  
