@@ -3,3 +3,21 @@
   height: 150px; /* Puedes ajustar la altura según tus necesidades */
   object-fit: cover; /* Esto recorta la imagen para que se ajuste sin deformarse */
 }
+
+.card{
+  border-color: rgb(0, 52, 84);
+  border-radius: 10px;
+  border: 2px, solid, black;
+}
+
+.card-img-top{
+  border-top-left-radius: 8px; /* Esquina inferior izquierda */
+  border-top-right-radius: 8px; /* Esquina inferior derecha */
+}
+
+.card-body{
+  background-color: rgb(25, 160, 205);
+  border-bottom-left-radius: 8px; /* Esquina inferior izquierda */
+  border-bottom-right-radius: 8px; /* Esquina inferior derecha */
+}
+

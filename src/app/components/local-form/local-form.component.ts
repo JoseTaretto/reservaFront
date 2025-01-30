@@ -19,32 +19,31 @@ export class LocalFormComponent {
     });
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.formNegocio.valid) {
-      
-      const formData = this.formNegocio.value; // Obtén los valores del formulario
-
-      fetch('http://localhost:3000/routerNegocio', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData), // Envía los datos del formulario como JSON
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Error al enviar los datos al servidor');
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log('Respuesta del servidor:', data);
-        })
-        .catch(error => {
-          console.error('Error al enviar el formulario:', error);
+      try {
+        const formData = this.formNegocio.value;
+        console.log(formData);
+  
+        const response = await fetch('http://localhost:3000/api/negocios', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
         });
+  
+        if (!response.ok) {
+          throw new Error(`Error al enviar los datos: ${response.statusText}`);
+        }
+  
+        const data = await response.json();
+        console.log('Respuesta del servidor:', data);
+        
+      } catch (error) {
+        console.error('Error al enviar el formulario:', error);
+      }
     } else {
       console.error('El formulario no es válido');
     }
   }
+  
 }
